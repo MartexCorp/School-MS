@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- Compiled and minified CSS Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Compiled and minified CSS  Materialize Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript Materialize-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body style="background-image: url(../static/images/background.png)">
+
+
+<div class="col l12 m10 s12 center">
+    <div class="card-panel"
+         style="background-image: url(../static/images/background.png); height: auto; width: auto; border: 1px ;">
+        <h1 style="color:white;">Login Credentials</h1>
+        {#      <h9 style="color:white;">Newbie ? You would want to Sign Up</h9> &nbsp;<a href="#">HERE</a>#}
+        <div class="card-panel">
+            <form method="POST" action="{{ url_for ('auth') }}">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input name="inputUser" type="text" class="validate">
+                    <label for="acct_icon">Username</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">lock</i>
+                    <input name="inputPassword" type="password" class="validate">
+                    <label for="password">Password</label>
+                </div>
+
+
+                <div class="center">
+                    <button type="submit" class="waves-effect waves-light btn green">
+                        <i class="material-icons left">done</i>Log In
+                    </button>
+
+                </div>
+                <div class="center"><img src="../../app/static/images/Preloader_9.gif" class="hide" id="preloader">
+
+                    {% if error %}
+                        <p class="center" style="color: red"><strong>Error:</strong> {{ error }}
+                    {% endif %}
+
+            </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+<script>
+    $(function () {
+        $('#loginbtn').click(function () {
+            $.ajax({
+                url: '/auth',
+                data: $('form').serialize(),
+                type: 'POST',
+                success: function () {
+                    console.log('Success ');
+                },
+                error: function (error) {
+                    console.log('Error ' + error);
+                }
+            });
+            document.getElementById("preloader").className.replace('hide','')
+        });
+    });
+
+</script>
+
+
+</html>

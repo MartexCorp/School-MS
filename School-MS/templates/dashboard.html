@@ -1,0 +1,237 @@
+{% extends 'base_templates/origin_template.html' %}
+
+{% block title %}Dashboard{% endblock %}
+{% block pagetitle %}Dashboard{% endblock %}
+{% block dashboardcolor %}grey lighten-2{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col s12 m6 l3">
+            <div class="card card-stats hoverable">
+                <div class="card-header" data-background-color="blue">
+                    <i class="material-icons">people</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Students Enrolled</p>
+                    <h3 class="title">110
+                        <small>Students</small>
+                    </h3>
+
+                </div>
+                <div class="progress center">
+                    <div class="determinate" style="width: 25%">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+
+                        <div class="right">
+                            16 -
+                            <div class="text-info">Males</div>
+                        </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="left">
+                            <div class="text-rose">Female</div>
+                            - 28
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l3">
+            <div class="card card-stats hoverable">
+                <div class="card-header" data-background-color="green">
+                    <i class="material-icons">euro_symbol</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Fees Paid</p>
+                    <h3 class="title">1.3M/4M
+                        <small></small>
+                    </h3>
+                </div>
+                <div class="progress center green lighten-4">
+                    <div class="determinate" style="width: 32.5%">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">monetization_on</i> <a href="#pablo">Financials</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l3">
+            <div class="card card-stats hoverable">
+                <div class="card-header" data-background-color="orange">
+                    <i class="material-icons">error</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Issues Adressed</p>
+                    <h3 class="title">16/20
+                        <small></small>
+                    </h3>
+                </div>
+                <div class="progress center orange lighten-4">
+                    <div class="determinate" style="width: 80%">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">event</i> <a href="#pablo">4 Issues Pending</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l3">
+            <div class="card card-stats hoverable">
+                <div class="card-header" data-background-color="red">
+                    <i class="material-icons">work</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Employees</p>
+                    <h3 class="title">25
+                        <small>Total</small>
+                    </h3>
+                </div>
+                <div class="progress center red lighten-4">
+                    <div class="determinate" style="width: 95%">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">payment</i> <a href="#pablo">Check Monthly payroll</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col s6">
+            <div class="card">
+                <div class="card-header" data-background-color="orange">
+                    <h4 class="title">Most Participative Subjects</h4>
+                    <p class="category">This list will be invalid as of 20th November, 2018</p>
+                </div>
+                <div class="card-content table-responsive">
+                    <table class="table table-hover">
+                        <thead class="text-info">
+                        <tr>
+                            <th>Code</th>
+                            <th>Subject Name</th>
+                            <th>Students Enrolled</th>
+                            <th>Percentage Success</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>0755</td>
+                            <td>Further Maths Mechanics</td>
+                            <td>35</td>
+                            <td>19%</td>
+                        </tr>
+                        <tr>
+                            <td>0520</td>
+                            <td>Additional Maths</td>
+                            <td>92</td>
+                            <td>70%</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s6">
+            <div class="card">
+                <div class="card-header" data-background-color="purple">
+                    <h4 class="title">Tasks</h4>
+                    <p class="category">This list is renewable as of 15th September, 2018</p>
+                </div>
+                <div class="card-content">
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="optionsCheckboxes" checked=""><span
+                                            class="checkbox-material"><span class="check"></span></span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>Sign contract for "What are conference organizers afraid of?"</td>
+                            <td class="td-actions text-right">
+                                <button type="button" rel="tooltip" title=""
+                                        class="btn btn-primary btn-simple btn-xs"
+                                        data-original-title="Edit Task">
+                                    <i class="material-icons">edit</i>
+                                </button>
+                                <button type="button" rel="tooltip" title=""
+                                        class="btn btn-danger btn-simple btn-xs" data-original-title="Remove">
+                                    <i class="material-icons">close</i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="optionsCheckboxes"><span
+                                            class="checkbox-material"><span class="check"></span></span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                            <td class="td-actions text-right">
+                                <button type="button" rel="tooltip" title=""
+                                        class="btn btn-primary btn-simple btn-xs"
+                                        data-original-title="Edit Task">
+                                    <i class="material-icons">edit</i>
+                                </button>
+                                <button type="button" rel="tooltip" title=""
+                                        class="btn btn-danger btn-simple btn-xs" data-original-title="Remove">
+                                    <i class="material-icons">close</i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="optionsCheckboxes"><span
+                                            class="checkbox-material"><span class="check"></span></span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>Flooded: One year later, assessing what was lost and what was found when a
+                                ravaging rain swept through metro Detroit
+                            </td>
+                            <td class="td-actions text-right">
+                                <button type="button" rel="tooltip" title=""
+                                        class="btn btn-primary btn-simple btn-xs"
+                                        data-original-title="Edit Task">
+                                    <i class="material-icons">edit</i>
+                                </button>
+                                <button type="button" rel="tooltip" title=""
+                                        class="btn btn-danger btn-simple btn-xs" data-original-title="Remove">
+                                    <i class="material-icons">close</i>
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}
